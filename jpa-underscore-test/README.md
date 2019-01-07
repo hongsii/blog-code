@@ -120,7 +120,7 @@ public class PersonRepositoryTest {
 
 테스트를 실행하게 되면 `addressZipCode`를 먼저 검색하고 없다면 로직에 따라 `addressZip`을 찾는데 `Person.addressZip` 프로퍼티가 존재하기 때문에 해당 프로퍼티가 탐색 경로로 선택돼 에러가 발생합니다.
 
-![test-fail](/images/jpa-underscore-test-fail.png)
+![test-fail](./images/jpa-underscore-test-fail.png)
 
 이제 명시적으로 탐색 경로를 나타내서 모호성을 해결해보겠습니다.
 
@@ -133,7 +133,7 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
 탐색경로를 지정한 메소드로 테스트를 실행하면 정상적으로 `Address`의 `zipCode`를 조건으로 선택하는 것을 확인할 수 있습니다.
 
-![test-success](/images/jpa-underscore-test-success.png)
+![test-success](./images/jpa-underscore-test-success.png)
 
 
 ### 결론
